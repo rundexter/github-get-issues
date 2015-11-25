@@ -4,23 +4,70 @@
 {
     //Required. Inputs the module expects.
     "inputs": [
-        //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "filter",
+            "title":"Filter"
+        },
+        {
+            "id": "state",
+            "title":"State"
+        },
+        {
+            "id": "labels",
+            "title":"Labels"
+        },
+        {
+            "id": "sort",
+            "title":"Sort"
+        },
+        {
+            "id": "direction",
+            "title":"Direction"
+        },
+        {
+            "id": "since",
+            "title":"Since"
         }
-        */
     ],
     //Required. Outputs the module emits.
     "outputs": [
-      //e.g.
-      /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "id",
+            "title":"ID"
+        },
+        {
+            "id": "html_url",
+            "title":"HTML URL"
+        },
+        {
+            "id": "number",
+            "title":"Number"
+        },
+        {
+            "id": "state",
+            "title":"State"
+        },
+        {
+            "id": "title",
+            "title":"Title"
+        },
+        {
+            "id": "body",
+            "title":"Body"
+        },
+        {
+            "id": "user",
+            "title":"Login"
+        },
+        {
+            "id": "labels",
+            "title":"Labels"
+        },
+        {
+            "id": "created_at",
+            "title":"Created at"
         }
-      */
     ],
-    "title": "GitHub Get Issues" /* Required.A display name for the module */
+    /* Required.A display name for the module */
+    "title": "GitHub Get Issues"
 }
