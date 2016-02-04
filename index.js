@@ -12,15 +12,20 @@ var pickInputs = {
         'since': 'since'
     },
     pickOutputs = {
-        'id': { key: 'data', fields: ['id'] },
-        'html_url': { key: 'data', fields: ['html_url'] },
-        'number': { key: 'data', fields: ['number'] },
-        'state': { key: 'data', fields: ['state'] },
-        'title': { key: 'data', fields: ['title'] },
-        'body': { key: 'data', fields: ['body'] },
-        'user': { key: 'data', fields: ['user.login'] },
-        'labels': { key: 'data', fields: ['labels'] },
-        'created_at': { key: 'data', fields: ['created_at'] }
+        '-': {
+            key: 'data',
+            fields: {
+                'id': 'id',
+                'html_url': 'html_url',
+                'number': 'number',
+                'state': 'state',
+                'title': 'title',
+                'body': 'body',
+                'user': 'user.login',
+                'labels': 'labels',
+                'created_at': 'created_at'
+            }
+        }
     };
 
 module.exports = {
@@ -43,10 +48,7 @@ module.exports = {
             type: 'oauth',
             token: _.get(credentials, 'access_token')
         });
-
         github.issues.getAll(inputs, function (error, dataInfo) {
-
-
             error ? this.fail(error) : this.complete(util.pickOutputs({data: dataInfo}, pickOutputs));
         }.bind(this));
     }
